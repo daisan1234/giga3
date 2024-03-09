@@ -12,7 +12,7 @@ export function getTemplate({
     <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Password Protected Site</title>
+      <title>パスワード認証</title>
       <meta name="description" content="This site is password protected.">
       <link rel="shortcut icon" href="https://picocss.com/favicon.ico">
 
@@ -43,14 +43,14 @@ export function getTemplate({
       <main>
         <article>
           <hgroup>
-            <h1>Password</h1>
-            <h2>Please enter your password for this site.</h2>
+            <h1>パスワード</h1>
+            <h2>パスワードを入力してください</h2>
           </hgroup>
-          ${withError ? `<p class="error">Incorrect password, please try again.</p>` : ''}
+          ${withError ? `<p class="error">パスワードが違います</p>` : ''}
           <form method="post" action="/cfp_login">
             <input type="hidden" name="redirect" value="${redirectPath}" />
             <input type="password" name="password" placeholder="Password" aria-label="Password" autocomplete="current-password" required autofocus>
-            <button type="submit" class="contrast">Login</button>
+            <button type="submit" class="contrast">解除</button>
           </form>
         </article>
       </main>
